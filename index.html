@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover Best Sellers</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        height: 100vh;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        height: 90vh;
+        padding-left: 7vh;
+        padding-right: 7vh;
+        /* gap: 1rem; */
+      }
+
+      /* Side columns */
+      .side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      }
+
+      .product {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        padding-bottom: 1.1rem;
+        border-bottom: 1px solid black;
+      }
+
+      .side .product:last-child {
+        border-bottom: none;
+      }
+
+      .product:hover {
+        transform: scale(1.03);
+      }
+
+      .product img {
+        width: 50%;
+        height: 25vh;
+        flex-shrink: 0;
+      }
+
+      .product-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .product-info .category {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #333;
+      }
+
+      .product-info .name {
+        font-size: 0.9rem;
+        /* font-weight: 500; */
+        color: #333;
+      }
+
+      .product-info .price {
+        font-size: 1.3rem;
+        color: #555;
+        margin-top: 1.2rem;
+      }
+
+      /* Center column */
+      .center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .center .image-box {
+        /* padding: 1rem; */
+        height: 80vh;
+        /* max-width: 380px; */
+        width: 100%;
+      }
+
+      .center .image-box img {
+        /* border: 2px solid #000; */
+        border-radius: 20px;
+        width: 80%;
+        height: 80vh;
+      }
+
+      .center .desc {
+        font-size: 1.2rem;
+        text-align: right;
+        color: #444;
+      }
+
+      .mainprice {
+        color: #444;
+      }
+
+      .mainDiv {
+        display: flex;
+        flex-direction: column;
+        margin-left: -50px;
+        align-items: flex-start;
+        margin-top: 1rem;
+        width: 70%;
+      }
+
+      .center .price {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left Column -->
+      <div class="side left">
+        <div class="product">
+          <img
+            src="./images/1.png"
+            alt="Ring"
+            data-name="Sterling Silver Ring"
+            data-price="$58.44"
+          />
+          <div class="product-info">
+            <p class="category">RING</p>
+            <p class="name">Sterling Silver</p>
+            <p class="price">$58.44</p>
+          </div>
+        </div>
+        <div class="product">
+          <img
+            src="./images/2.png"
+            alt="Earrings"
+            data-name="Sterling Silver Earrings"
+            data-price="$62.10"
+          />
+          <div class="product-info">
+            <p class="category">EARRINGS</p>
+            <p class="name">Sterling Silver</p>
+            <p class="price">$62.10</p>
+          </div>
+        </div>
+        <div class="product">
+          <img
+            src="./images/3.png"
+            alt="Bracelet"
+            data-name="Sterling Silver Bracelet"
+            data-price="$75.00"
+          />
+          <div class="product-info">
+            <p class="category">BRACELET</p>
+            <p class="name">Sterling Silver</p>
+            <p class="price">$75.00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center Column -->
+      <div class="center">
+        <div class="image-box">
+          <img id="main-image" src="./images/main.png" alt="Main Product" />
+        </div>
+        <div class="mainDiv">
+          <p id="main-desc" class="desc">Sterling Silver Jewelry</p>
+          <p id="main-price" class="price">$58.44</p>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="side right">
+        <div class="product">
+          <img
+            src="./images/4.png"
+            alt="Ring"
+            data-name="Sterling Silver Ring"
+            data-price="$45.90"
+          />
+          <div class="product-info">
+            <p class="category">RING</p>
+            <p class="name">Sterling Silver</p>
+            <p class="price">$45.90</p>
+          </div>
+        </div>
+        <div class="product">
+          <img
+            src="./images/5.png"
+            alt="Necklace"
+            data-name="Sterling Silver Necklace"
+            data-price="$89.99"
+          />
+          <div class="product-info">
+            <p class="category">NECKLACE</p>
+            <p class="name">Sterling Silver</p>
+            <p class="price">$89.99</p>
+          </div>
+        </div>
+        <div class="product">
+          <img
+            src="./images/6.png"
+            alt="Ring"
+            data-name="Sterling Silver Ring"
+            data-price="$52.30"
+          />
+          <div class="product-info">
+            <p class="category">RING</p>
+            <p class="name">Sterling Silver</p>
+            <p class="price">$52.30</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const sideImages = document.querySelectorAll(".product img");
+      const mainImage = document.getElementById("main-image");
+      const mainDesc = document.getElementById("main-desc");
+      const mainPrice = document.getElementById("main-price");
+
+      sideImages.forEach((img) => {
+        img.addEventListener("mouseenter", () => {
+          mainImage.src = img.src; // image change
+          mainDesc.textContent = img.dataset.name; // name change
+          mainPrice.textContent = img.dataset.price; // price change
+        });
+      });
+    </script>
+  </body>
+</html>
