@@ -5,31 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Discover Best Sellers</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-      }
-
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #fff;
-        height: 100vh;
-      }
-
       .container {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
         height: 90vh;
         padding-left: 7vh;
         padding-right: 7vh;
-        /* gap: 1rem; */
       }
 
-      /* Side columns */
       .side {
         display: flex;
         flex-direction: column;
@@ -75,7 +58,6 @@
 
       .product-info .name {
         font-size: 0.9rem;
-        /* font-weight: 500; */
         color: #333;
       }
 
@@ -85,7 +67,6 @@
         margin-top: 1.2rem;
       }
 
-      /* Center column */
       .center {
         display: flex;
         flex-direction: column;
@@ -95,14 +76,11 @@
       }
 
       .center .image-box {
-        /* padding: 1rem; */
         height: 80vh;
-        /* max-width: 380px; */
         width: 100%;
       }
 
       .center .image-box img {
-        /* border: 2px solid #000; */
         border-radius: 20px;
         width: 80%;
         height: 80vh;
@@ -136,7 +114,6 @@
   </head>
   <body>
     <div class="container">
-      <!-- Left Column -->
       <div class="side left">
         <div class="product">
           <img
@@ -179,7 +156,6 @@
         </div>
       </div>
 
-      <!-- Center Column -->
       <div class="center">
         <div class="image-box">
           <img id="main-image" src="./images/main.png" alt="Main Product" />
@@ -190,7 +166,6 @@
         </div>
       </div>
 
-      <!-- Right Column -->
       <div class="side right">
         <div class="product">
           <img
@@ -242,9 +217,9 @@
 
       sideImages.forEach((img) => {
         img.addEventListener("mouseenter", () => {
-          mainImage.src = img.src; // image change
-          mainDesc.textContent = img.dataset.name; // name change
-          mainPrice.textContent = img.dataset.price; // price change
+          mainImage.src = img.src;
+          mainDesc.textContent = img.dataset.name;
+          mainPrice.textContent = img.dataset.price;
         });
       });
     </script>
